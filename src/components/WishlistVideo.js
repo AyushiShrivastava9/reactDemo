@@ -1,7 +1,6 @@
 import React from "react";
-import ACTIONS from "../modules/action";
 import { connect } from "react-redux";
-import { createStackNavigator } from 'react-navigation-stack';
+//import { createStackNavigator } from 'react-navigation-stack';
 import Home from './Home'
 
 class WishlistVideo extends React.Component {
@@ -9,6 +8,7 @@ class WishlistVideo extends React.Component {
     return (
       <div>
         <div>
+          Hello
           {this.props.wishListvideos.map(video => (
             <div>
               <iframe
@@ -35,12 +35,12 @@ const mapStateToProps = state => ({
     mapStateToProps
   )(WishlistVideo);
 
-  const AppNavigator = createStackNavigator(
-    {
-      Home: Home,
-      Details: WishlistVideo,
-    },
-    {
-      initialRouteName: 'Home',
-    }
-  );
+  // const AppNavigator = createStackNavigator(
+  //   {
+  //     Home: Home,
+  //     Details: WishlistVideo,
+  //   },
+  //   {
+  //     initialRouteName: 'Home',
+  //   }
+  // );
